@@ -21,9 +21,14 @@
     <!-- Custom styles for this template -->
     <link href="css/agency.css" rel="stylesheet">
 
+    <!-- template engine -->
+    <!-- development version --><script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- production version <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+
   </head>
 
   <body id="page-top">
+    <div id="app">
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
@@ -64,78 +69,25 @@
     <!-- Portfolio Grid -->
     <section class="bg-light" id="portfolio">
       <div class="container">
+
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase">Current Offerings</h2>
             <h3 class="section-subheading text-muted">All prices in CAD. Click on a coffee for more information. To order, <a class="js-scroll-trigger" href="#contact">email</a> us with your bean selection and amount.</h3>
           </div>
         </div>
+        
         <div class="row">
-          <div class="col portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content"></div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/ethiopia-wonberta-kercha-station-guji-1_1.jpg" alt="">
-              <div class="portfolio-caption">Ethiopia Guji Shakiso Sewana Site</div>
-            </a>
-            <p class="price">$4.25 / 4oz</p>
-          </div>
-          <div class="col portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content"></div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/brazil-minas-coffee-1_2.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">Brazil Minasul Competition Eduardo Ferreira</div>
-            <p class="price">$4.00 / 4oz</p>
+          <div v-for="coffee in coffees"> 
+            <div class="col portfolio-item" data-toggle="modal" v-bind:href="'#coffeeModal' + coffee.id">
+              <div class="overlay"></div>
+              <img class="img-fluid" v-bind:src="'img/coffees/' + coffee.id + '.jpg'" alt="">
+              <div class="portfolio-caption">{{coffee.name}}</div>
+              <p class="price">${{coffee.price}} / 4oz</p>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content"></div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/ethiopiques-espresso-blend_3.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">Sweet Maria's Ethiopiques Blend</div>
-            <p class="price">$4.25 / 4oz</p>
-          </div>
-          <div class="col portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content"></div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/colombiahuilaangeloeduardososanaturaltabigp4-640x427.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">Colombia Huila Angelo Eduardo Sosa Tabi Natural</div>
-            <p class="price">$4.25 / 4oz</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content"></div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/peruorgcenfrocafe5_grande.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">Peru Org. SHB EP Norte</div>
-            <p class="price">$3.00 / 4oz</p>
-          </div>
-          <div class="col portfolio-item">
-            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-              <div class="portfolio-hover">
-                <div class="portfolio-hover-content"></div>
-              </div>
-              <img class="img-fluid" src="img/portfolio/guat-huehue.jpg" alt="">
-            </a>
-            <div class="portfolio-caption">Guatemalan Huehuetenango SHB EP Gran Quetzal</div>
-            <p class="price">$3.00 / 4oz</p>
-          </div>
-        </div>
+
       </div>
     </section>
 
@@ -212,8 +164,18 @@
         </div>
         <div class="row">
           <div class="col-lg-12">
-            <p style="text-align: center;"><i class="material-icons">email</i> E-mail us at: </p>
-            <p style="color: rgb(37, 94, 180); text-align: center; font-size: 18px; font-style: italic"><strong>overcast <span style="color: #555">{dot}</span> coffee <span style="color: #555">{dot}</span> roasters <span style="color: #555">{at}</span> gmail <span style="color: #555">{dot}</span> com</strong>.</p>
+            <div class="social-buttons">
+              <p>
+                <a href="#"><i class="fa fa-envelope-o"></i> </a> <strong>overcast <span style="color: #555">{dot}</span> coffee <span style="color: #555">{dot}</span> roasters <span style="color: #555">{at}</span> gmail <span style="color: #555">{dot}</span> com</strong>
+              </p>
+              <p>
+                <a href="#"><i class="fa fa-facebook"></i></a> overcastcoffee
+              </li>
+              <p>
+                <a href="#"><i class="fa fa-instagram"></i></a> @overcastcoffee
+              </p>
+            </div>
+            <p style="color: rgb(37, 94, 180); text-align: center; font-size: 18px; font-style: italic"></p>
             <!--<form id="contactForm" name="sentMessage" novalidate="novalidate">
               <div class="row">
                 <div class="col-md-6">
@@ -255,26 +217,36 @@
           <div class="col-md-4">
             <span class="copyright">Copyright &copy; Overcast Coffee Roasters 2019</span>
           </div>
-          <!--<div class="col-md-4">
+          <div class="col-md-4">
             <ul class="list-inline social-buttons">
-              <li class="list-inline-item">
+              <!--<li class="list-inline-item">
                 <a href="#">
                   <i class="fab fa-twitter"></i>
                 </a>
-              </li>
+              </li>-->
               <li class="list-inline-item">
                 <a href="#">
-                  <i class="fab fa-facebook-f"></i>
+                  <i class="fa fa-envelope-o"></i>
                 </a>
               </li>
               <li class="list-inline-item">
+                <a href="#">
+                  <i class="fa fa-facebook"></i>
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a href="#">
+                  <i class="fa fa-instagram"></i>
+                </a>
+              </li>
+              <!--<li class="list-inline-item">
                 <a href="#">
                   <i class="fab fa-linkedin-in"></i>
                 </a>
-              </li>
+              </li>-->
             </ul>
           </div>
-          <div class="col-md-4">
+          <!--<div class="col-md-4">
             <ul class="list-inline quicklinks">
               <li class="list-inline-item">
                 <a href="#">Privacy Policy</a>
@@ -282,16 +254,16 @@
               <li class="list-inline-item">
                 <a href="#">Terms of Use</a>
               </li>
-            </ul>
-          </div>-->
+            </ul>-->
         </div>
       </div>
     </footer>
 
-    <!-- Portfolio Modals -->
 
-    <!-- Modal 1 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Coffee Detail Modals -->
+    <div v-for="coffee in coffees"> 
+      <div class="portfolio-modal modal fade" v-bind:id="'coffeeModal' + coffee.id" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="close-modal" data-dismiss="modal"><i class="material-icons">close</i></div>
@@ -300,24 +272,24 @@
               <div class="col-lg-10 mx-auto">
                 <div class="modal-body">
                   <!-- Project Details Go Here -->
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/ethiopia-wonberta-kercha-station-guji-1_1.jpg" alt="">
-                  <h2 class="text-uppercase">Ethiopia Guji Shakiso Sewana Site</h2>
-                  <h3><span class="bean-details-price">$4.25 / 4oz</span> <button id="sendMessageButton" type="button" class="btn btn-primary btn-md text-uppercase" data-toggle="popover" data-content="E-mail us at with the name of the coffee and quantity you'd like to purchase">BUY</button></h3>
+                  <img class="img-fluid d-block mx-auto" v-bind:src="'img/coffees/' + coffee.id + '.jpg'" alt="">
+                  <h2 class="text-uppercase">{{coffee.name}}</h2>
+                  <h3><span class="bean-details-price">${{coffee.price}} / 4oz</span> <button id="sendMessageButton" type="button" class="btn btn-primary btn-md text-uppercase" data-toggle="popover" data-content="E-mail us at with the name of the coffee and quantity you'd like to purchase">BUY</button></h3>
                   <hr />
                   <div class="bean-details">
-                    <p>Strong jasmine florals, black tea notes, and citrus hints. Acidity is mouthcleansing, the finish marked by mango tea, berry, and passion fruit.</p>
+                    <p>{{coffee.description}}</p>
                     <table class="table table-sm">
                         <tr>
                           <th><a href="https://en.wikipedia.org/wiki/List_of_coffee_varieties" target="_blank">Cultivar</a></th>
-                          <td>Heirloom Cultivars</td>
+                          <td>{{coffee.cultivar}}</td>
                         </tr>
                         <tr>
                           <th>Region</th>
-                          <td>Sewana, Guji Zone</td>
+                          <td>{{coffee.region}}</td>
                         </tr>
                         <tr>
                           <th><a href="https://en.wikipedia.org/wiki/Coffee_production#Processing" target="_blank">Processing</a></th>
-                          <td>Wet Process (Washed)</td>
+                          <td>{{coffee.processing}}</td>
                         </tr>
                     </table>
                   </div>
@@ -327,206 +299,11 @@
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Modal 2 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal"><i class="material-icons">close</i></div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-10 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/brazil-minas-coffee-1_2.jpg" alt="">
-                  <h2 class="text-uppercase">Brazil Minasul Competition Eduardo Ferreira</h2>
-                  <h3><span class="bean-details-price">$4.00 / 4oz</span> <button id="sendMessageButton" type="button" class="btn btn-primary btn-md text-uppercase" data-toggle="popover" data-content="E-mail us at with the name of the coffee and quantity you'd like to purchase">BUY</button></h3>
-                  <hr />
-                  <p>The cup has pleasing, milky mouthfeel that weighs heavy on your tongue, notes of Brazil nut, banana chips, cocoa powder, and dehydrated strawberry. Heavier cocoa with roast.</p>
-                  <div class="bean-details">
-                    <table class="table table-sm">
-                        <tr>
-                          <th><a href="https://en.wikipedia.org/wiki/List_of_coffee_varieties" target="_blank">Cultivar</a></th>
-                          <td>Bourbon</td>
-                        </tr>
-                        <tr>
-                          <th>Region</th>
-                          <td>Sul de Minas</td>
-                        </tr>
-                        <tr>
-                          <th><a href="https://en.wikipedia.org/wiki/Coffee_production#Processing" target="_blank">Processing</a></th>
-                          <td>Dry Process (Natural) - Patio Sun-dried</td>
-                        </tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
 
-    <!-- Modal 3 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal"><i class="material-icons">close</i></div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-10 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/ethiopiques-espresso-blend_3.jpg" alt="">
-                  <h2 class="text-uppercase">Sweet Maria's Ethiopiques Blend</h2>
-                  <h3><span class="bean-details-price">$4.25 / 4oz</span> <button id="sendMessageButton" type="button" class="btn btn-primary btn-md text-uppercase" data-toggle="popover" data-content="E-mail us at with the name of the coffee and quantity you'd like to purchase">BUY</button></h3>
-                  <hr />
-                  <p>Incredible espresso and brewed coffee. Full City shots have ultra sweet chocolate flavors, along with citrus complexity, and prevalent floral characteristics. It's definitely on the wilder side of espresso, but without being "over the top". Fruit flavors shift and the sweet aftertaste lingers long.</p>
-                  <div class="bean-details">
-                    <table class="table table-sm">
-                        <tr>
-                          <th><a href="https://en.wikipedia.org/wiki/List_of_coffee_varieties" target="_blank">Cultivar</a></th>
-                          <td>Heirloom Varietals</td>
-                        </tr>
-                        <tr>
-                          <th>Region</th>
-                          <td>Multiple</td>
-                        </tr>
-                        <tr>
-                          <th><a href="https://en.wikipedia.org/wiki/Coffee_production#Processing" target="_blank">Processing</a></th>
-                          <td>Varied. Raised Bed Sun-dried.</td>
-                        </tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal 4 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal"><i class="material-icons">close</i></div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-10 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/colombiahuilaangeloeduardososanaturaltabigp4-640x427.jpg" alt="">
-                  <h2 class="text-uppercase">Colombia Huila Angelo Eduardo Sosa Tabi Natural</h2>
-                  <h3><span class="bean-details-price">$4.25 / 4oz</span> <button id="sendMessageButton" type="button" class="btn btn-primary btn-md text-uppercase" data-toggle="popover" data-content="E-mail us at with the name of the coffee and quantity you'd like to purchase">BUY</button></h3>
-                  <hr />
-                  <p>Great and very lively red fruit tones, a bit of floral, a little hint of citrus all combining with a traditional Huila undertone (jammy, nutty and chocolaty).</p>
-                  <div class="bean-details">
-                    <table class="table table-sm">
-                        <tr>
-                          <th><a href="https://en.wikipedia.org/wiki/List_of_coffee_varieties" target="_blank">Cultivar</a></th>
-                          <td>Tabi – a strain created by crossing a couple different Arabicas: Typica, Bourbon and Timor Hybrid</td>
-                        </tr>
-                        <tr>
-                          <th>Region</th>
-                          <td>El Cogollo a community within the municipality of Gigante in the department of Huila</td>
-                        </tr>
-                        <tr>
-                          <th><a href="https://en.wikipedia.org/wiki/Coffee_production#Processing" target="_blank">Processing</a></th>
-                          <td>Natural</td>
-                        </tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal 5 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal"><i class="material-icons">close</i></div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-10 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/peruorgcenfrocafe5_grande.jpg" alt="">
-                  <h2 class="text-uppercase">Peru Organic Norte SHB EP</h2>
-                  <h3><span class="bean-details-price">$3.00 / 4oz</span> <button id="sendMessageButton" type="button" class="btn btn-primary btn-md text-uppercase" data-toggle="popover" data-content="E-mail us at with the name of the coffee and quantity you'd like to purchase">BUY</button></h3>
-                  <hr />
-                  <p>A great gentle and smooth cup of coffee. A little bit of acidity at the light roast points which gives a bit of an overly floral tone, as the beans themselves age into the crop year, this will become a bit milder – fresh new crop acidity is usually what we say. From a city + roast and beyond, a low acidity cup with a bit of a sweet edge to it. Medium bodied and predominately chocolaty, a great everyday drinker.</p>
-                  <div class="bean-details">
-                    <table class="table table-sm">
-                        <tr>
-                          <th><a href="https://en.wikipedia.org/wiki/List_of_coffee_varieties" target="_blank">Cultivar</a></th>
-                          <td>Bourbon, Typica, Caturra</td>
-                        </tr>
-                        <tr>
-                          <th>Region</th>
-                          <td>San Ignacio, Jaen, Cajamarca</td>
-                        </tr>
-                        <tr>
-                          <th><a href="https://en.wikipedia.org/wiki/Coffee_production#Processing" target="_blank">Processing</a></th>
-                          <td>Wet (washed)</td>
-                        </tr>
-                        <tr>
-                          <th>Farm/Co-op</th>
-                          <td><a href="https://coopcoffees.coop/cenfrocafe/" target="_blank">CENFROCAFE</a></td>
-                        </tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Modal 6 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal"><i class="material-icons">close</i></div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-10 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <img class="img-fluid d-block mx-auto" src="img/portfolio/guat-huehue.jpg" alt="">
-                  <h2 class="text-uppercase">Guatemalan Huehuetenango SHB EP Gran Quetzal</h2>
-                  <h3><span class="bean-details-price">$3.00 / 4oz</span> <button id="sendMessageButton" type="button" class="btn btn-primary btn-md text-uppercase" data-toggle="popover" data-content="E-mail us at with the name of the coffee and quantity you'd like to purchase">BUY</button></h3>
-                  <hr />
-                  <p>Delicious surprise and a staff favorite, for its bright, juicy acidity, syrupy body and classic flavors of sweet orange and milk chocolate.</p>
-                  <div class="bean-details">
-                    <table class="table table-sm">
-                        <tr>
-                          <th><a href="https://en.wikipedia.org/wiki/List_of_coffee_varieties" target="_blank">Cultivar</a></th>
-                          <td>Typica, Bourbon, Caturra and Catuai</td>
-                        </tr>
-                        <tr>
-                          <th>Region</th>
-                          <td>Huehuetenango</td>
-                        </tr>
-                        <tr>
-                          <th><a href="https://en.wikipedia.org/wiki/Coffee_production#Processing" target="_blank">Processing</a></th>
-                          <td>Washed, European Prep</td>
-                        </tr>
-                    </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
@@ -551,6 +328,10 @@
         $('[data-toggle="tooltip"]').tooltip()
       })
     </script>
+
+    <script src="js/app.js"></script>
+
+    </div>
   </body>
 
 </html>
