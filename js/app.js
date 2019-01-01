@@ -50,7 +50,7 @@ var app = new Vue({
             },
             {
                 id: "6",
-                name: "Guatemalan Huehuetenango SHB EP Gran Quetzal",
+                name: "Guatemala Huehuetenango SHB EP Gran Quetzal",
                 description:  "Delicious surprise and a staff favorite, for its bright, juicy acidity, syrupy body and classic flavors of sweet orange and milk chocolate.",
                 price: "3.00",
                 cultivar: "Typica, Bourbon, Caturra and Catuai",
