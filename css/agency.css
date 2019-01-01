@@ -320,16 +320,11 @@ header.masthead .intro-text .intro-heading {
   margin-top: 30px;
 }
 
-.bean-details th {
-  vertical-align: top;
-  text-align: right;
-  padding: 8px 16px 8px 0;
-}
-
-.bean-details td {
-  vertical-align: top;
-  text-align: left;
-  padding: 6px 8px 6px 0;
+.bean-details-price {
+  color: rgb(2, 163, 26);
+  font-size: 0.8em;
+  font-style: italic;
+  padding: 3px 10px 3px 10px;
 }
 
 #portfolio .portfolio-item {
