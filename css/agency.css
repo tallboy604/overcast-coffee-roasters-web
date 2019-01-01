@@ -515,6 +515,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   position: relative;
   padding: 0;
   list-style: none;
+  margin-top: 40px;
 }
 
 .timeline:before {
@@ -629,7 +630,7 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   }
   .timeline > li {
     min-height: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 40px;
   }
   .timeline > li .timeline-panel {
     float: left;
