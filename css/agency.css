@@ -364,7 +364,7 @@ header.masthead .intro-text .intro-heading {
 }
 
 .portfolio-modal .modal-content {
-  padding: 100px 0;
+  padding: 40px 0;
   text-align: center;
 }
 
@@ -401,40 +401,14 @@ header.masthead .intro-text .intro-heading {
   position: absolute;
   top: 25px;
   right: 25px;
-  width: 75px;
-  height: 75px;
+  width: 15px;
+  height: 15px;
   cursor: pointer;
   background-color: transparent;
 }
 
 .portfolio-modal .close-modal:hover {
   opacity: 0.3;
-}
-
-.portfolio-modal .close-modal .lr {
-  /* Safari and Chrome */
-  z-index: 1051;
-  width: 1px;
-  height: 75px;
-  margin-left: 35px;
-  /* IE 9 */
-  -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
-  background-color: #212529;
-}
-
-.portfolio-modal .close-modal .lr .rl {
-  /* Safari and Chrome */
-  z-index: 1052;
-  width: 1px;
-  height: 75px;
-  /* IE 9 */
-  -webkit-transform: rotate(90deg);
-  transform: rotate(90deg);
-  background-color: #212529;
-}
-
-section#about {
 }
 
 section#contact {
