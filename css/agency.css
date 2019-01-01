@@ -254,6 +254,12 @@ header.masthead .intro-text .intro-heading {
   }
 }
 
+@media (max-width: 767px) {
+  #coffees .portfolio-item {
+    width: 80%;
+  }
+}
+
 #coffees .portfolio-item .portfolio-caption {
   padding: 0;
   text-align: center;
