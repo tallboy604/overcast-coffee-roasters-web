@@ -31,198 +31,201 @@
     <!-- vue.js container -->
     <div id="app">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top"><img class="img-fluid" src="img/logos/cloud-icon-sm.png" alt="" style="margin-right: 15px"> Overcast Coffee Roasters</a>
-        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="fa fa-bars"></i>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav text-uppercase ml-auto">
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#coffees">Coffees</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-
-    <!-- Header -->
-    <header class="masthead">
-      <div class="container">
-        <div class="intro-text">
-          <img class="img-fluid" src="img/logos/cloud-icon.png" alt="" style="margin-right: 15px; margin-bottom: 30px;">
-          <div class="intro-lead-in">Specialty beans. Craft roasted to order. Made in Vancouver.</div>
-          <!--<div class="intro-heading text-uppercase">Overcast Coffee Roasters</div>-->
-          <a class="btn btn-primary btn-xl js-scroll-trigger" href="#coffees">See our coffees</a>
-        </div>
-      </div>
-    </header>
-
-    <!-- Coffees -->
-    <section class="bg-light" id="coffees">
-      <div class="container">
-
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Coffees</h2>
-            <h3 class="section-subheading text-muted">Our current offerings. All prices in CAD. Click on a coffee for more information.</h3>
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="porfolio-item-container" v-for="coffee in coffees"> 
-            <div class="col portfolio-item" data-toggle="modal" v-bind:href="'#coffeeModal' + coffee.id">
-              <div class="overlay"></div>
-              <img class="img-fluid" v-bind:src="'img/coffees/' + coffee.id + '.jpg'" alt="">
-              <div class="portfolio-caption">{{coffee.name}}</div>
-              <p class="price">${{coffee.price}} / 4oz</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">About</h2>
-            <!--<h3 class="section-subheading text-muted"></h3>-->
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-12">
-
-            <ul class="timeline">
-              <li>
-                <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/about/vancouver.jpg" alt="">
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>Location</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">Proudly headquartered in beautiful Vancouver, British Columbia, Canada.</p>
-                  </div>
-                </div>
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+          <a class="navbar-brand js-scroll-trigger" href="#page-top"><img class="img-fluid" src="img/logos/cloud-icon-sm.png" alt="" style="margin-right: 15px"> Overcast Coffee Roasters</a>
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ml-auto">
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#coffees">Coffees</a>
               </li>
-              <li class="timeline-inverted">
-                <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/about/beans.jpg" alt="">
-                </div>
-                <div class="timeline-panel">  
-                  <div class="timeline-heading">
-                    <h4>Mission</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">Our goal is to share our passion for specialty coffee. We aim to make freshly roasted coffee accessible and affordable to the masses and only roast to order to ensure maximum freshness.</p>
-                  </div>
-                </div>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#about">About</a>
               </li>
-              <li>
-                <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/about/quest-m3.jpg" alt="">
-                </div>
-                <div class="timeline-panel">
-                  <div class="timeline-heading">
-                    <h4>Equipment</h4>
-                  </div>
-                  <div class="timeline-body">
-                    <p class="text-muted">
-                      We roast on a <a href="https://www.coffeeshrub.com/the-quest-m3s-coffee-roaster.html" target="_blank">Quest M3</a> home roaster in small 150g batches. 
-                      Each roast is precisely monitored using <a href="https://artisan-scope.org/" target="_blank">Artisan</a> software and thermocouples to monitor roast development of each batch.
-                    </p>
-                  </div>
-                </div>
+              <li class="nav-item">
+                <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
               </li>
             </ul>
-
           </div>
         </div>
-      </div>
-    </section>
+      </nav>
 
-    <!-- Contact -->
-    <section id="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Contact Us</h2>
-            <!--<h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>-->
+      <!-- Header -->
+      <header class="masthead">
+        <div class="container">
+          <div class="intro-text">
+            <img class="img-fluid" src="img/logos/cloud-icon.png" alt="" style="margin-right: 15px; margin-bottom: 30px;">
+            <div class="intro-lead-in">Specialty beans. Craft roasted to order. Made in Vancouver.</div>
+            <!--<div class="intro-heading text-uppercase">Overcast Coffee Roasters</div>-->
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#coffees">See our coffees</a>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="social-buttons">
-              <p><i class="fa fa-envelope-o contact-icon"></i> overcast <span style="color: #999">{dot}</span> coffee <span style="color: #999">{dot}</span> roasters <span style="color: #999">{at}</span> gmail <span style="color: #999">{dot}</span> com</p>
-              <p><i class="fa fa-facebook contact-icon"></i> <a href="https://www.facebook.com/overcastcoffee/" target="_blank">overcastcoffee</a></p>
-              <!--<p><i class="fa fa-instagram contact-icon"></i> <a href="#">@overcastcoffee</a></p>-->
+      </header>
+
+      <!-- Coffees -->
+      <section class="bg-light" id="coffees">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-heading text-uppercase">Coffees</h2>
+              <h3 class="section-subheading text-muted">Our current offerings. All prices in CAD. Click on a coffee for more information.</h3>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="porfolio-item-container" v-for="coffee in coffees"> 
+              <div class="col portfolio-item" data-toggle="modal" v-bind:href="'#coffeeModal' + coffee.id">
+                <div class="overlay"></div>
+                <img class="img-fluid" v-bind:src="'img/coffees/' + coffee.id + '.jpg'" alt="">
+                <div class="portfolio-caption">{{coffee.name}}</div>
+                <p class="price">${{coffee.price}} / 4oz</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-heading text-uppercase">About</h2>
+              <!--<h3 class="section-subheading text-muted"></h3>-->
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+
+              <ul class="timeline">
+                <li>
+                  <div class="timeline-image">
+                    <img class="rounded-circle img-fluid" src="img/about/vancouver.jpg" alt="">
+                  </div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h4>Location</h4>
+                    </div>
+                    <div class="timeline-body">
+                      <p class="text-muted">Proudly headquartered in beautiful Vancouver, British Columbia, Canada.</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="timeline-inverted">
+                  <div class="timeline-image">
+                    <img class="rounded-circle img-fluid" src="img/about/beans.jpg" alt="">
+                  </div>
+                  <div class="timeline-panel">  
+                    <div class="timeline-heading">
+                      <h4>Mission</h4>
+                    </div>
+                    <div class="timeline-body">
+                      <p class="text-muted">Our goal is to share our passion for specialty coffee. We aim to make freshly roasted coffee accessible and affordable to the masses and only roast to order to ensure maximum freshness.</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="timeline-image">
+                    <img class="rounded-circle img-fluid" src="img/about/quest-m3.jpg" alt="">
+                  </div>
+                  <div class="timeline-panel">
+                    <div class="timeline-heading">
+                      <h4>Equipment</h4>
+                    </div>
+                    <div class="timeline-body">
+                      <p class="text-muted">
+                        We roast on a <a href="https://www.coffeeshrub.com/the-quest-m3s-coffee-roaster.html" target="_blank">Quest M3</a> home roaster in small 150g batches. 
+                        Each roast is precisely monitored using <a href="https://artisan-scope.org/" target="_blank">Artisan</a> software and thermocouples to monitor roast development of each batch.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Footer -->
-    <footer>
-      <div class="container">
-        <span class="copyright">Copyright &copy; Overcast Coffee Roasters 2019</span>
-      </div>
-    </footer>
+      <!-- Contact -->
+      <section id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-heading text-uppercase">Contact Us</h2>
+              <!--<h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>-->
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="social-buttons">
+                <p><i class="fa fa-envelope-o contact-icon"></i> overcast <span style="color: #999">{dot}</span> coffee <span style="color: #999">{dot}</span> roasters <span style="color: #999">{at}</span> gmail <span style="color: #999">{dot}</span> com</p>
+                <p><i class="fa fa-facebook contact-icon"></i> <a href="https://www.facebook.com/overcastcoffee/" target="_blank">overcastcoffee</a></p>
+                <!--<p><i class="fa fa-instagram contact-icon"></i> <a href="#">@overcastcoffee</a></p>-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <div class="container">
+          <span class="copyright">Copyright &copy; Overcast Coffee Roasters 2019</span>
+        </div>
+      </footer>
 
 
-    <!-- Coffee Detail Modals -->
-    <div v-for="coffee in coffees"> 
-      <div class="portfolio-modal modal fade" v-bind:id="'coffeeModal' + coffee.id" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="close-modal" data-dismiss="modal"><i class="material-icons">close</i></div>
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-10 mx-auto">
-                <div class="modal-body">
-                  <!-- Project Details Go Here -->
-                  <img class="img-fluid d-block mx-auto" v-bind:src="'img/coffees/' + coffee.id + '.jpg'" alt="">
-                  <h2 class="text-uppercase">{{coffee.name}}</h2>
-                  <h3><span class="bean-details-price">${{coffee.price}} / 4oz</span> <button id="sendMessageButton" type="button" class="btn btn-primary btn-md text-uppercase" data-toggle="popover" data-content="E-mail us at with the name of the coffee and quantity you'd like to purchase">BUY</button></h3>
-                  <hr />
-                  <div class="bean-details">
-                    <p>{{coffee.description}}</p>
-                    <table class="table table-sm">
-                        <tr>
-                          <th><a href="https://en.wikipedia.org/wiki/List_of_coffee_varieties" target="_blank">Cultivar</a></th>
-                          <td>{{coffee.cultivar}}</td>
-                        </tr>
-                        <tr>
-                          <th>Region</th>
-                          <td>{{coffee.region}}</td>
-                        </tr>
-                        <tr>
-                          <th><a href="https://en.wikipedia.org/wiki/Coffee_production#Processing" target="_blank">Processing</a></th>
-                          <td>{{coffee.processing}}</td>
-                        </tr>
-                    </table>
+      <!-- Coffee Detail Modals -->
+      <div v-for="coffee in coffees"> 
+        <div class="portfolio-modal modal fade" v-bind:id="'coffeeModal' + coffee.id" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal"><i class="material-icons">close</i></div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-10 mx-auto">
+                  <div class="modal-body">
+                    <!-- Project Details Go Here -->
+                    <img class="img-fluid d-block mx-auto" v-bind:src="'img/coffees/' + coffee.id + '.jpg'" alt="">
+                    <h2 class="text-uppercase">{{coffee.name}}</h2>
+                    <h3><span class="bean-details-price">${{coffee.price}} / 4oz</span> <button id="sendMessageButton" type="button" class="btn btn-primary btn-md text-uppercase" data-toggle="popover" data-content="E-mail us at with the name of the coffee and quantity you'd like to purchase">BUY</button></h3>
+                    <hr />
+                    <div class="bean-details">
+                      <p>{{coffee.description}}</p>
+                      <table class="table table-sm">
+                          <tr>
+                            <th><a href="https://en.wikipedia.org/wiki/List_of_coffee_varieties" target="_blank">Cultivar</a></th>
+                            <td>{{coffee.cultivar}}</td>
+                          </tr>
+                          <tr>
+                            <th>Region</th>
+                            <td>{{coffee.region}}</td>
+                          </tr>
+                          <tr>
+                            <th><a href="https://en.wikipedia.org/wiki/Coffee_production#Processing" target="_blank">Processing</a></th>
+                            <td>{{coffee.processing}}</td>
+                          </tr>
+                      </table>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        </div>
       </div>
 
-      </div>
-    </div>
+    
+    </div><!-- End Vue.js container -->
     
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
@@ -253,7 +256,6 @@
     <!-- Vue.js init -->
     <script src="js/app.js"></script>
 
-    </div>
   </body>
 
 </html>
