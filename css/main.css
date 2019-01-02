@@ -108,13 +108,12 @@ img::-moz-selection {
 }
 
 #mainNav .navbar-toggler {
-  font-size: 12px;
+  font-size: 25px;
   right: 0;
   padding: 13px;
   text-transform: uppercase;
   color: white;
   border: 0;
-  background-color: #1f5790;
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
@@ -368,6 +367,7 @@ header.masthead .intro-text .intro-heading {
   height: 25px;
   cursor: pointer;
   background-color: transparent;
+  font-size: 30px;
 }
 
 .portfolio-modal .close-modal:hover {
