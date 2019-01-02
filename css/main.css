@@ -362,10 +362,10 @@ header.masthead .intro-text .intro-heading {
 
 .portfolio-modal .close-modal {
   position: absolute;
-  top: 25px;
-  right: 25px;
-  width: 15px;
-  height: 15px;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
   cursor: pointer;
   background-color: transparent;
 }
