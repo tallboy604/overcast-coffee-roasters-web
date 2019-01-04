@@ -205,7 +205,7 @@ header.masthead .intro-text .intro-heading {
 
 @media (min-width: 768px) {
   header.masthead .intro-text {
-    padding-top: 300px;
+    padding-top: 200px;
     padding-bottom: 200px;
   }
   header.masthead .intro-text .intro-lead-in {
@@ -229,11 +229,15 @@ header.masthead .intro-text .intro-heading {
 
 #coffees {
   text-align: center;
-  background-color: #353535;
+  background-color: #dc752d;
 }
 
 #coffees .section-heading {
   color: #fff;
+}
+
+#coffees .section-subheading {
+  color: #efc688;
 }
 
 .card-title {
@@ -263,7 +267,7 @@ header.masthead .intro-text .intro-heading {
 .coffee-card-price {
   font-family: 'Thasadith', sans-serif;
   font-size: 1.4em;
-  color: #1bb700;
+  color: #ffed00;
   margin-bottom: 0.2em;
 }
 
@@ -370,12 +374,10 @@ section#contact .section-heading {
 footer {
   padding: 15px;
   text-align: center;
-}
-
-footer span.copyright {
-  font-size: 90%;
-  line-height: 40px;
-  text-transform: none;
+  background-color: #f44;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
 }
 
 .timeline {
