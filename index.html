@@ -222,12 +222,12 @@
                   <div class="modal-body">
                     <!-- Project Details Go Here -->
                     <img class="img-fluid d-block mx-auto" v-bind:src="'img/coffees/' + coffee.id + '.jpg'" alt="">
-                    <h2 class="text-uppercase">{{coffee.name}}</h2>
-                    <h3><span class="bean-details-price">${{coffee.price}} / 4oz</span> <button id="sendMessageButton" type="button" class="btn btn-primary btn-md text-uppercase" data-toggle="popover" data-content="E-mail us at with the name of the coffee and quantity you'd like to purchase">BUY</button></h3>
+                    <p><span class="bean-details-price">{{coffee.price}}</span> <button id="sendMessageButton" type="button" class="btn btn-primary btn-md text-uppercase" data-toggle="popover" data-content="E-mail us at with the name of the coffee and quantity you'd like to purchase">BUY</button></p>
+                    <h2 class="coffee-detail-modal-title">{{coffee.name}}</h2>
                     <hr />
                     <div class="bean-details">
                       <p>{{coffee.description}}</p>
-                      <table class="table table-sm">
+                      <table class="table table-sm bean-details-table">
                           <tr>
                             <th><a href="https://en.wikipedia.org/wiki/List_of_coffee_varieties" target="_blank">Cultivar</a></th>
                             <td>{{coffee.cultivar}}</td>

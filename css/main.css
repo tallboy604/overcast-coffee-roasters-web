@@ -294,12 +294,18 @@ header.masthead .intro-text .intro-heading {
 .bean-details {
   text-align: left;
   margin-top: 30px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.bean-details-table th, .bean-details-table td {
+  font-size: 0.9em;
+  font-family: 'Roboto', sans-serif;
 }
 
 .bean-details-price {
-  color: rgb(2, 163, 26);
-  font-size: 0.8em;
-  font-style: italic;
+  color: #eaa339;
+  font-size: 1.6em;
+  font-family: 'Thasadith', sans-serif;
   padding: 3px 10px 3px 10px;
 }
 
@@ -366,6 +372,18 @@ header.masthead .intro-text .intro-heading {
 
 .portfolio-modal .close-modal:hover {
   opacity: 0.3;
+}
+
+.coffee-detail-modal-title {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#about {
+  /*background-image: url("../img/roasting-lq.gif");*/
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position: center center;
+  background-size: cover;
 }
 
 section#contact {
