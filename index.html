@@ -88,7 +88,7 @@
       </header>
 
       <!-- Coffees -->
-      <section class="bg-light" id="coffees">
+      <section id="coffees">
         <div class="container">
 
           <div class="row">
@@ -99,12 +99,13 @@
           </div>
           
           <div class="row">
-            <div class="porfolio-item-container" v-for="coffee in coffees"> 
-              <div class="col portfolio-item" data-toggle="modal" v-bind:href="'#coffeeModal' + coffee.id">
-                <div class="overlay"></div>
-                <img class="img-fluid" v-bind:src="'img/coffees/' + coffee.id + '.jpg'" alt="">
-                <div class="portfolio-caption">{{coffee.name}}</div>
-                <p class="price">${{coffee.price}} / 4oz</p>
+            <div class="col-sm-4" v-for="coffee in coffees">
+              <div class="card coffee-grid-card" data-toggle="modal" v-bind:href="'#coffeeModal' + coffee.id">
+                <img class="card-img-top coffee-grid-image" v-bind:src="'img/coffees/' + coffee.id + '.jpg'" alt="">
+                <div class="card-body">
+                  <p class="card-text coffee-card-price">{{coffee.price}} <span class="coffee-card-price-subtext">/ 125g</span></p>
+                  <h5 class="card-title">{{coffee.name}}</h5>
+                </div>
               </div>
             </div>
           </div>
