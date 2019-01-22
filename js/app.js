@@ -112,6 +112,26 @@ $(function() {
                 region: "Sidama, SNNP, Ethiopia",
                 processing: "Natural--dried in the fruit. Decaffeinated by Mountain Water Process",
                 active: true
+            },
+            {
+                id: "8",
+                name: "Sumatra Wet Process Gunung Tujuh",
+                description:  "A sweet foundation of burned sugar and caramel/toffee, a yellow custard note, dried apple, tamarind, a basil hint, and a vibrant rindy orange flavor. A clean, wet processed Sumatran coffee.",
+                price: "4.25",
+                cultivar: "Typica",
+                region: "Gunung Tujuh, Mount Kerinci",
+                processing: "Wet Process, Patio Sun-Dried",
+                active: true
+            },
+            {
+                id: "9",
+                name: "La Tacita Floral Gesha Blend",
+                description: "Floral intensity is what this blend is about. Equal parts Gesha + two washed coffees from Rwandi and Ethiopia, expect jasmine to lily florals, bold citrus flavors, and vibrant acidity.",
+                price: "6.00",
+                cultivar: "Gesha, Ethiopia Heirloom, Bourbon",
+                region: "Acatenango, Guatemala; Illubabor, Western Ethiopia; Karongi, Rwanda",
+                processing: "Wet Processed",
+                active: true
             }
         ]
     }
