@@ -1,4 +1,44 @@
-var app = new Vue({
+$(function() {
+  "use strict"; // Start of use strict
+
+  //enable bootstrap popovers and tooltips
+  $('[data-toggle="popover"]').popover();
+  $('[data-toggle="tooltip"]').tooltip();
+
+  // Closes responsive menu when a scroll trigger link is clicked
+  $('.js-scroll-trigger').click(function() {
+    $('.navbar-collapse').collapse('hide');
+  });
+
+  // Activate scrollspy to add active class to navbar items on scroll
+  $('body').scrollspy({
+    target: '#mainNav',
+    offset: 56
+  });
+
+  // Collapse Navbar
+  var navbarCollapse = function() {
+    if ($("#mainNav").offset().top > 100) {
+      $("#mainNav").addClass("navbar-shrink");
+    } else {
+      $("#mainNav").removeClass("navbar-shrink");
+    }
+  };
+  // Collapse now if page is not at top
+  navbarCollapse();
+  // Collapse the navbar when page is scrolled
+  $(window).scroll(navbarCollapse);
+
+  // Hide navbar when modals trigger
+  $('.portfolio-modal').on('show.bs.modal', function(e) {
+    $('.navbar').addClass('d-none');
+  });
+  $('.portfolio-modal').on('hidden.bs.modal', function(e) {
+    $('.navbar').removeClass('d-none');
+  });
+  
+  // init vue.js app
+  var app = new Vue({
     el: '#app',
     data: {
         coffees: [
@@ -10,6 +50,7 @@ var app = new Vue({
                 cultivar: "Heirloom Cultivars",
                 region: "Sewana, Guji Zone",
                 processing: "Wet Process (Washed)",
+                active: true
             },
             {
                 id: "2",
@@ -19,6 +60,7 @@ var app = new Vue({
                 cultivar: "Bourbon",
                 region: "	Sul de Minas",
                 processing: "Dry Process (Natural) - Patio Sun-dried",
+                active: true
             },
             {
                 id: "3",
@@ -28,6 +70,7 @@ var app = new Vue({
                 cultivar: "Heirloom Cultivars",
                 region: "Multiple",
                 processing: "	Varied. Raised Bed Sun-dried.",
+                active: true
             },
             {
                 id: "4",
@@ -37,6 +80,7 @@ var app = new Vue({
                 cultivar: "Tabi – a strain created by crossing a couple different Arabicas: Typica, Bourbon and Timor Hybrid",
                 region: "El Cogollo a community within the municipality of Gigante in the department of Huila",
                 processing: "Natural",
+                active: true
             },
             {
                 id: "5",
@@ -47,6 +91,7 @@ var app = new Vue({
                 region: "San Ignacio, Jaen, Cajamarca",
                 processing: "Wet Process (Washed)",
                 farm: "CENFROCAFE",
+                active: true
             },
             {
                 id: "6",
@@ -56,7 +101,20 @@ var app = new Vue({
                 cultivar: "Typica, Bourbon, Caturra and Catuai",
                 region: "Huehuetenango",
                 processing: "Washed, European Prep",
+                active: false
             },
+            {
+                id: "7",
+                name: "Ethiopia Sidama Natural Decaf",
+                description:  "Smooth maple syrup sweetness and subtle fruit and floral character.  As espresso, flavors of salted caramel, honey, and candied citrus.",
+                price: "4.25",
+                cultivar: "Indigenous landraces and selections",
+                region: "Sidama, SNNP, Ethiopia",
+                processing: "Natural--dried in the fruit. Decaffeinated by Mountain Water Process",
+                active: true
+            }
         ]
     }
-})
+});
+
+}); // End of use strict
