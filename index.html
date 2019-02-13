@@ -102,7 +102,7 @@
           </div>
           
           <div class="row">
-            <div class="col-sm-4" v-for="coffee in coffees">
+            <div class="col-sm-4" v-for="coffee in coffees" v-if="coffee.active">
               <div class="card coffee-grid-card" data-toggle="modal" v-bind:href="'#coffeeModal' + coffee.id">
                 <img class="card-img-top coffee-grid-image" v-bind:src="'img/coffees/' + coffee.id + '.jpg'" alt="">
                 <div class="card-body">
