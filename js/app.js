@@ -111,7 +111,7 @@ $(function() {
                 cultivar: "Indigenous landraces and selections",
                 region: "Sidama, SNNP, Ethiopia",
                 processing: "Natural--dried in the fruit. Decaffeinated by Mountain Water Process",
-                active: true
+                active: false
             },
             {
                 id: "8",
@@ -131,6 +131,36 @@ $(function() {
                 cultivar: "Gesha, Ethiopia Heirloom, Bourbon",
                 region: "Acatenango, Guatemala; Illubabor, Western Ethiopia; Karongi, Rwanda",
                 processing: "Wet Processed",
+                active: true
+            },
+            {
+                id: "10",
+                name: "Papua New Guinea Honey Nebilyer Estate",
+                description: "Honey process seems to bring out fruited notes like cranberry, raisin, red grape, and underscored by molasses-like sweetness. This PNG boasts body, and with mild acidity, is great espresso too.",
+                price: "4.25",
+                cultivar: "Arusha, Bourbon, Typica",
+                region: "Waghi Valley",
+                processing: "Honey Process",
+                active: true
+            },
+            {
+                id: "11",
+                name: "Ethiopia Debub Merab SWP Decaf",
+                description: "Earth-toned cocoa, carob chips, natural dried apricot and raisin, and grain-like qualities that are similar to chocolate rye stout beer. City+ to Full City. Good for espresso.",
+                price: "4.25",
+                cultivar: "Heirloom Cultivars",
+                region: "Sidama and Limu",
+                processing: "Wet Process then SWP Decaf",
+                active: true
+            },
+            {
+                id: "12",
+                name: "Guatemala Huehuetenango Xinabajul SWP Decaf",
+                description: "A well-rounded, balanced brew. Flavors of unrefined sugars and dry roasted nut, as well as bittering cocoa powder, and a light herbal accent of tarragon. Satisfying in the middle roast range. Good for espresso.",
+                price: "4.25",
+                cultivar: "Bourbon, Catuai, Caturra, Typica",
+                region: "",
+                processing: "Wet Process then SWP Decaf",
                 active: true
             }
         ]
