@@ -60,7 +60,7 @@ $(function() {
                 cultivar: "Bourbon",
                 region: "	Sul de Minas",
                 processing: "Dry Process (Natural) - Patio Sun-dried",
-                active: true
+                active: false
             },
             {
                 id: "3",
