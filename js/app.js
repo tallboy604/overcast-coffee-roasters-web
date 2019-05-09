@@ -50,7 +50,7 @@ $(function() {
                 cultivar: "Heirloom Cultivars",
                 region: "Sewana, Guji Zone",
                 processing: "Wet Process (Washed)",
-                active: true
+                active: false
             },
             {
                 id: "2",
