@@ -137,7 +137,7 @@ $(function() {
                 id: "10",
                 name: "Papua New Guinea Honey Nebilyer Estate",
                 description: "Honey process seems to bring out fruited notes like cranberry, raisin, red grape, and underscored by molasses-like sweetness. This PNG boasts body, and with mild acidity, is great espresso too.",
-                price: "4.25",
+                price: "4.75",
                 cultivar: "Arusha, Bourbon, Typica",
                 region: "Waghi Valley",
                 processing: "Honey Process",
