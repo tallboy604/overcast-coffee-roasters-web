@@ -70,7 +70,7 @@ $(function() {
                 cultivar: "Heirloom Cultivars",
                 region: "Multiple",
                 processing: "	Varied. Raised Bed Sun-dried.",
-                active: true
+                active: false
             },
             {
                 id: "4",
