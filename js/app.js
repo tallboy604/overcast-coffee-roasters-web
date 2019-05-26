@@ -162,6 +162,26 @@ $(function() {
                 region: "",
                 processing: "Wet Process then SWP Decaf",
                 active: true
+            },
+            {
+                id: "13",
+                name: "Mexico Chiapas Mayan Harvest Bella Vista",
+                description: "The Bella Vista municipality is located deep in the Chiapas region of Mexico, and is the birthplace of Rosalba Cifuentes, the founder of Mayan Harvest. Rosalba founded her organization (which has now grown to 70 producers, 50 of whom are women) to work with coffee producers in the area on improving harvesting and processing their coffee to get more competitive prices. Many of these producers have very little land, so these increased premiums make a significant difference in the producers’ livelihoods. Mayan Harvest also provides medical and dental assistance to its members as well. Beyond its humanitarian impact, the coffee is also of exceptional quality. Chocolate mousse and maple lay a backdrop on which peach and plum notes dance and jasmine-like notes.",
+                price: "4.50",
+                cultivar: "Bourbon, Catimor, Caturra, Typica",
+                region: "La Rinconada, El Progreso, Unión Progreso, and Barrio Montaña communities of Bella Vista, Chiapas, Mexico",
+                processing: "Fully washed after pulping, fermenting, then dried in the sun.",
+                active: true
+            },
+            {
+                id: "14",
+                name: "Brazil Legender Estate Peaberry Natural",
+                description: "Legender Especial is a blend of coffees grown in the unique micro-regions of Machado, Poco Fundo and Campestre, located in Minas Gerais State, Brazil. Most coffee regions in Brazil are well known for large coffee plantations in big farms. Legender Especial goes in the opposite direction, consisting of small farms called sitios. All lots are purchased directly from growers committed to quality and willing to provide detailed information about their sitios, harvesting methods, drying techniques and other relevant information about their coffee.",
+                price: "4.50",
+                cultivar: "Mundo Novo, Yellow Catuai, Red Catuai",
+                region: "Machado, Poco Fundo and Campestre, located in Minas Gerais State",
+                processing: "Natural (Patio sun dried)",
+                active: true
             }
         ]
     }
