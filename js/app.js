@@ -176,7 +176,7 @@ $(function() {
             {
                 id: "14",
                 name: "Brazil Legender Estate Peaberry Natural",
-                description: "Legender Especial is a blend of coffees grown in the unique micro-regions of Machado, Poco Fundo and Campestre, located in Minas Gerais State, Brazil. Most coffee regions in Brazil are well known for large coffee plantations in big farms. Legender Especial goes in the opposite direction, consisting of small farms called sitios. All lots are purchased directly from growers committed to quality and willing to provide detailed information about their sitios, harvesting methods, drying techniques and other relevant information about their coffee.",
+                description: "Legender Especial is a blend of coffees grown in the unique micro-regions of Machado, Poco Fundo and Campestre, located in Minas Gerais State, Brazil. Most coffee regions in Brazil are well known for large coffee plantations in big farms. Legender Especial goes in the opposite direction, consisting of small farms called sitios. All lots are purchased directly from growers committed to quality. This coffee  has a nice full flavor to it. Creamy/buttery, with caramel and slight cocoa and some malty flavors. Really nice floral aroma.",
                 price: "4.50",
                 cultivar: "Mundo Novo, Yellow Catuai, Red Catuai",
                 region: "Machado, Poco Fundo and Campestre, located in Minas Gerais State",
