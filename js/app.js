@@ -91,7 +91,7 @@ $(function() {
                 region: "San Ignacio, Jaen, Cajamarca",
                 processing: "Wet Process (Washed)",
                 farm: "CENFROCAFE",
-                active: true
+                active: false
             },
             {
                 id: "6",
