@@ -141,7 +141,7 @@ $(function() {
                 cultivar: "Arusha, Bourbon, Typica",
                 region: "Waghi Valley",
                 processing: "Honey Process",
-                active: true
+                active: false
             },
             {
                 id: "11",
