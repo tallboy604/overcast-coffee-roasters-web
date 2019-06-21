@@ -161,7 +161,7 @@ $(function() {
                 cultivar: "Bourbon, Catuai, Caturra, Typica",
                 region: "",
                 processing: "Wet Process then SWP Decaf",
-                active: true
+                active: false
             },
             {
                 id: "13",
