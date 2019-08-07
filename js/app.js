@@ -91,7 +91,7 @@ $(function() {
                 region: "San Ignacio, Jaen, Cajamarca",
                 processing: "Wet Process (Washed)",
                 farm: "CENFROCAFE",
-                active: true
+                active: false
             },
             {
                 id: "6",
@@ -121,7 +121,7 @@ $(function() {
                 cultivar: "Typica",
                 region: "Gunung Tujuh, Mount Kerinci",
                 processing: "Wet Process, Patio Sun-Dried",
-                active: true
+                active: false
             },
             {
                 id: "9",
@@ -141,7 +141,7 @@ $(function() {
                 cultivar: "Arusha, Bourbon, Typica",
                 region: "Waghi Valley",
                 processing: "Honey Process",
-                active: true
+                active: false
             },
             {
                 id: "11",
@@ -161,7 +161,7 @@ $(function() {
                 cultivar: "Bourbon, Catuai, Caturra, Typica",
                 region: "",
                 processing: "Wet Process then SWP Decaf",
-                active: true
+                active: false
             },
             {
                 id: "13",
@@ -181,6 +181,36 @@ $(function() {
                 cultivar: "Mundo Novo, Yellow Catuai, Red Catuai",
                 region: "Machado, Poco Fundo and Campestre, located in Minas Gerais State",
                 processing: "Natural (Patio sun dried)",
+                active: true
+            },
+            {
+                id: "15",
+                name: "Ethiopia Natural Yirgacheffe Gelana Abaya G1",
+                description: "Balanced and sweet with crisp fruit acidity and a smooth mouthfeel; lots of berry and dry red wine with floral, cocoa, caramel and blueberry flavors.",
+                price: "4.50",
+                cultivar: "Ethiopian Heirloom",
+                region: "Yirgacheffe, Gelana and Abaya districts",
+                processing: "Natural",
+                active: true
+            },
+            {
+                id: "16",
+                name: "El Salvador Las Victorias Orange Bourbon",
+                description: "With over 100 years of experience producing coffee, the descendants of the Magaña-Menendez family clearly have the process down to a science. As members of Rainforest Alliance, their commitment to sustainability and the preservation of their ecosystems is very serious. This coffee is big and juicy with a tangerine-like citrus, and a black cherry-like sweetness.",
+                price: "4.50",
+                cultivar: "Orange Bourbon",
+                region: "Apaneca-Ilamatepec Mountain",
+                processing: "Fully washed",
+                active: true
+            },
+            {
+                id: "17",
+                name: "Colombia Royal Select MWP Decaf",
+                description: "Colombia Royal Select MWP Decaf comes from small family-owned farms in the Colombian 'coffee triangle.' Small coffee producers pick and process their coffee at their own micro-wet mills and then dry their own coffee, typically on elevated tables inside solar dryers that provide protection from the rain. This coffee has a nice smooth rich flavor of caramel and chocolate to it with a nutty aroma, a bit of brightness and a slight orange flavor at the end.",
+                price: "4.50",
+                cultivar: "Castillo",
+                region: "Caldas, Risaralda and Quindio",
+                processing: "MWP",
                 active: true
             }
         ]
