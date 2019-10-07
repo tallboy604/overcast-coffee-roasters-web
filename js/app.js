@@ -131,7 +131,7 @@ $(function() {
                 cultivar: "Gesha, Ethiopia Heirloom, Bourbon",
                 region: "Acatenango, Guatemala; Illubabor, Western Ethiopia; Karongi, Rwanda",
                 processing: "Wet Processed",
-                active: true
+                active: false
             },
             {
                 id: "10",
