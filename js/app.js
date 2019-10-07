@@ -151,7 +151,7 @@ $(function() {
                 cultivar: "Heirloom Cultivars",
                 region: "Sidama and Limu",
                 processing: "Wet Process then SWP Decaf",
-                active: true
+                active: false
             },
             {
                 id: "12",
