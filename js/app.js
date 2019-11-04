@@ -212,6 +212,26 @@ $(function() {
                 region: "Caldas, Risaralda and Quindio",
                 processing: "MWP",
                 active: true
+            },
+            {
+                id: "18",
+                name: "Burundi Kayanza Gakenke",
+                description: "A lovely, delicate Burundi cup. Fruited hints of apricot and dried papaya with complex baking spice notes woven through, like mace, clove, and anise. Syrupy sweetness from start to finish and mild floral character.",
+                price: "3.75",
+                cultivar: "Bourbon",
+                region: "Gakenke, Kayanza Province",
+                processing: "Wet Process (Washed)",
+                active: true
+            },
+            {
+                id: "19",
+                name: "Rwanda Nyamasheke Kanyege Station",
+                description: "Cane juice sweetness anchors the cup, lemon grass tea, citric acidity, cinnamon and all-spice finish. Robust spiced chocolate when roasted dark. Prime espresso option.",
+                price: "3.75",
+                cultivar: "Bourbon",
+                region: "Nyamasheke, Western Province",
+                processing: "Wet Process",
+                active: true
             }
         ]
     }
