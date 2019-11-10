@@ -278,6 +278,11 @@ header.masthead .intro-text .intro-heading {
   margin-bottom: 0.2em;
 }
 
+.coffee-card-price-units {
+  font-size: 0.7em;
+  color: #eee;
+}
+
 .card-body {
   padding: 0.5em;
 }
