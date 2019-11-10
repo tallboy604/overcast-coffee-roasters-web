@@ -94,10 +94,10 @@
           <div class="row">
             <div class="col-lg-12 text-center">
               <h2 class="section-heading text-uppercase">Coffees</h2>
-              <h3 class="section-subheading">Our current offerings. All prices are in CAD per 125g unit. Click on a coffee for more information.</h3>
-              <p style="margin-bottom: 35px;">
+              <h3 class="section-subheading">Our current offerings. All prices are in CAD. Click on a coffee for more information.</h3>
+              <!--<p style="margin-bottom: 35px;">
                 <a class="order-button" href="https://goo.gl/forms/GQBY4mN485Q9qLLh2" target="_blank"><i class="fa fa-shopping-cart" style="margin-right: 7px;"></i> Order Coffee</a>
-              </p>
+              </p>-->
             </div>
           </div>
           
@@ -107,7 +107,8 @@
                 <img class="card-img-top coffee-grid-image" v-bind:src="'img/coffees/' + coffee.id + '.jpg'" alt="">
                 <div class="card-body">
                   <p class="card-text coffee-card-price">
-                    <span>{{coffee.price}}</span>
+                    <span class="coffee-card-price">{{coffee.price}}</span>
+                    <span class="coffee-card-price-units">/100g</span>
                   </p>
                   <h5 class="card-title">{{coffee.name}}</h5>
                 </div>
