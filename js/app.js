@@ -80,7 +80,7 @@ $(function() {
                 cultivar: "Tabi – a strain created by crossing a couple different Arabicas: Typica, Bourbon and Timor Hybrid",
                 region: "El Cogollo a community within the municipality of Gigante in the department of Huila",
                 processing: "Natural",
-                active: true
+                active: false
             },
             {
                 id: "5",
@@ -171,7 +171,7 @@ $(function() {
                 cultivar: "Bourbon, Catimor, Caturra, Typica",
                 region: "La Rinconada, El Progreso, Unión Progreso, and Barrio Montaña communities of Bella Vista, Chiapas, Mexico",
                 processing: "Fully washed after pulping, fermenting, then dried in the sun.",
-                active: true
+                active: false
             },
             {
                 id: "14",
