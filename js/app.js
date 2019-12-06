@@ -181,7 +181,7 @@ $(function() {
                 cultivar: "Mundo Novo, Yellow Catuai, Red Catuai",
                 region: "Machado, Poco Fundo and Campestre, located in Minas Gerais State",
                 processing: "Natural (Patio sun dried)",
-                active: true
+                active: false
             },
             {
                 id: "15",
