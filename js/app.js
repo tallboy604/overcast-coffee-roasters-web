@@ -232,6 +232,26 @@ $(function() {
                 region: "Nyamasheke, Western Province",
                 processing: "Wet Process",
                 active: true
+            },
+            {
+                id: "20",
+                name: "Flores Manu Lalu Cooperative",
+                description: "Delicious, balanced drinking coffee, cocoa nibs, almond milk, bittering spice and natural sugar sweetness. Acidity is quietly present, lively. Great espresso.",
+                price: "3.00",
+                cultivar: "S795, Typica",
+                region: "Wolo Bobo, Bajawa",
+                processing: "Wet Process",
+                active: true
+            },
+            {
+                id: "21",
+                name: "Costa Rica Tarrazu Don Mayo La Loma",
+                description: " This is one sweet cup through and through, with a finish that is clean, exemplary of the fantastic job of Don Mayo mill's mechanical washing. Heady brown sugar sweetness, flavors of cane juice, apple, candied walnut, baking spice, and tootsie roll.",
+                price: "3.00",
+                cultivar: "Caturra",
+                region: "San Marcos, Tarrazu",
+                processing: "Wet Process",
+                active: true
             }
         ]
     }
