@@ -252,6 +252,16 @@ $(function() {
                 region: "San Marcos, Tarrazu",
                 processing: "Wet Process",
                 active: true
+            },
+            {
+                id: "22",
+                name: "Brazil Mogiana",
+                description: "Brazil Mogiana is produced by farmers organized around cooperatives in the Mogiana growing region split between the states of São Paulo and Minas Gerais, Brazil. The aroma is very nutty and sweet. Full bodied and low acidity – this is a traditional tasting Brazil – thick, creamy, nutty and semi-sweet. Very sweet first taste, almost a little fruity, and then quickly turns darker-toned with a bakers chocolate and slightly toasted walnut flavor. ",
+                price: "2.50",
+                cultivar: "Mondo Novo and Catuai",
+                region: "Mogiana",
+                processing: "Natural",
+                active: true
             }
         ]
     }
