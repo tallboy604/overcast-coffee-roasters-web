@@ -191,7 +191,7 @@ $(function() {
                 cultivar: "Ethiopian Heirloom",
                 region: "Yirgacheffe, Gelana and Abaya districts",
                 processing: "Natural",
-                active: true
+                active: false
             },
             {
                 id: "16",
@@ -261,7 +261,7 @@ $(function() {
                 cultivar: "Mondo Novo and Catuai",
                 region: "Mogiana",
                 processing: "Natural",
-                active: true
+                active: false
             }
         ]
     }
