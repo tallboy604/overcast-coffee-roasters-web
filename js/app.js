@@ -201,7 +201,7 @@ $(function() {
                 cultivar: "Orange Bourbon",
                 region: "Apaneca-Ilamatepec Mountain",
                 processing: "Fully washed",
-                active: true
+                active: false
             },
             {
                 id: "17",
