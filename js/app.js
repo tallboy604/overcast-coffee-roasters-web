@@ -262,6 +262,36 @@ $(function() {
                 region: "Mogiana",
                 processing: "Natural",
                 active: true
+            },
+            {
+                id: "23",
+                name: "Ethiopia Yirgacheffe Wonago G1",
+                description: "Wonago, in the Gedeo zone of Ethiopia, is one of the original regions that introduced Yirgacheffe Coffee. This coffee is grown at an altitude of 1900 meters above sea level and processed at Ayele Degu Washing station in Gedeo Zone. This coffee is sweet, with deep cherry notes, full-body, and medium acidity.",
+                price: "2.50",
+                cultivar: "",
+                region: "Wonago, Gedeo",
+                processing: "Washed",
+                active: true
+            },
+            {
+                id: "24",
+                name: "Ethiopia Natural Espresso Blend",
+                description: "Ethiopian Espresso Blend is a delicately balanced mix of Abyssinia Mocha, Harar Boldgrain and Jimma Shimekte. It will yield a rich espresso with a sweet taste and a thick crema.",
+                price: "2.50",
+                cultivar: "",
+                region: "",
+                processing: "Natural",
+                active: true
+            },
+            {
+                id: "25",
+                name: "Ethiopia Lekempti Anfilo",
+                description: "Lekempti Anfilo Natural produces a clean cup with medium acidity and elegant notes of red apple and lychee. Lekempti Anfilo is cultivated in the Wollega region at an altitude of 1750-1800 meters above sea level. Anfilo is still a dense forest coffee with old genetic material. This coffee comes from Atsede Kutula’s Washing Station",
+                price: "2.25",
+                cultivar: "",
+                region: "Wollega",
+                processing: "Natural",
+                active: true
             }
         ]
     }
