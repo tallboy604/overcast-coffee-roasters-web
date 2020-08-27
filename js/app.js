@@ -191,7 +191,7 @@ $(function() {
                 cultivar: "Ethiopian Heirloom",
                 region: "Yirgacheffe, Gelana and Abaya districts",
                 processing: "Natural",
-                active: true
+                active: false
             },
             {
                 id: "16",
@@ -201,7 +201,7 @@ $(function() {
                 cultivar: "Orange Bourbon",
                 region: "Apaneca-Ilamatepec Mountain",
                 processing: "Fully washed",
-                active: true
+                active: false
             },
             {
                 id: "17",
