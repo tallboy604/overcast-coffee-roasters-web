@@ -211,7 +211,7 @@ $(function() {
                 cultivar: "Castillo",
                 region: "Caldas, Risaralda and Quindio",
                 processing: "MWP",
-                active: true
+                active: false
             },
             {
                 id: "18",
@@ -261,7 +261,7 @@ $(function() {
                 cultivar: "Mondo Novo and Catuai",
                 region: "Mogiana",
                 processing: "Natural",
-                active: true
+                active: false
             },
             {
                 id: "23",
@@ -271,7 +271,7 @@ $(function() {
                 cultivar: "",
                 region: "Wonago, Gedeo",
                 processing: "Washed",
-                active: true
+                active: false
             },
             {
                 id: "24",
