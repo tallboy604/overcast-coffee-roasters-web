@@ -231,7 +231,7 @@ $(function() {
                 cultivar: "Bourbon",
                 region: "Nyamasheke, Western Province",
                 processing: "Wet Process",
-                active: true
+                active: false
             },
             {
                 id: "20",
@@ -251,7 +251,7 @@ $(function() {
                 cultivar: "Caturra",
                 region: "San Marcos, Tarrazu",
                 processing: "Wet Process",
-                active: true
+                active: false
             },
             {
                 id: "22",
