@@ -292,6 +292,36 @@ $(function() {
                 region: "Wollega",
                 processing: "Natural",
                 active: true
+            },
+            {
+                id: "26",
+                name: "Ethiopia Yirgacheffe Natural Organic Bedhatu Jibacho",
+                description: "this natural coffee from Bedhatu Jibicho, with its delicate florality layered on top of ripe strawberry, raspberry, and peach notes, that captured our attention. We tasted jasmine, peach, raspberry, star fruit, kiwi, watermelon, cherry…the list goes on!",
+                price: "3.00",
+                cultivar: "Indigenous heirloom cultivars",
+                region: "Gedeb District, Gedeo Zone",
+                processing: "Natural",
+                active: true
+            },
+            {
+                id: "27",
+                name: "Indonesia Bali Kintamani Natural RFA Organic",
+                description: "“Kintamani Natural” is 100% sundried on raised beds; It’s perhaps the first ever special prep natural Indonesian. Raised beds keep the cherry free of dirty flavor, and facilitate very quick drying in Bali’s high altitude sun and constant island breeze. The cup is extraordinarily exotic and unique with a rich, buttery mouthfeel, while retaining Indonesia’s full-bodied, savory character. It features super-intense, brandyish fruit flavors of plum and sweet cherry.",
+                price: "2.50",
+                cultivar: "Heirloom Arabicas, Typica & Bourbon",
+                region: "Kintamani, Bali",
+                processing: "Natural",
+                active: true
+            },
+            {
+                id: "28",
+                name: "Panama Boquete Kotowa Mandarina Traditional Washed SHB EP",
+                description: "The Kotowa farms (which include Finca Don K – where this coffee was grown) were named by Alexander Duncan MacIntyre, a Canadian who settled in the Boquete region in 1918. Inspired by the high, cool climate of the area, he used the name ‘Kotawa,’ meaning 'mountain' in the local Ngobe language to designate the land that currently composes the Kotowa estate. ALMOND, CHOCOLATE, JUICY, CLEAN",
+                price: "2.50",
+                cultivar: "Caturra",
+                region: "Boquete, Chiriquí, Panama",
+                processing: "Washed",
+                active: true
             }
         ]
     }
