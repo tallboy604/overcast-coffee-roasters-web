@@ -221,7 +221,7 @@ $(function() {
                 cultivar: "Bourbon",
                 region: "Gakenke, Kayanza Province",
                 processing: "Wet Process (Washed)",
-                active: true
+                active: false
             },
             {
                 id: "19",
@@ -241,7 +241,7 @@ $(function() {
                 cultivar: "S795, Typica",
                 region: "Wolo Bobo, Bajawa",
                 processing: "Wet Process",
-                active: true
+                active: false
             },
             {
                 id: "21",
